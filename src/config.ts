@@ -1,1 +1,1 @@
- export  const jwt_password="!123123"
+ export  const jwt_password="123123"

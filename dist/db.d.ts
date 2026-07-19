@@ -1,52 +1,127 @@
-import { Schema } from "mongoose";
-export declare const UserModel: import("mongoose").Model<{
+import mongoose, { Schema, Model } from "mongoose";
+export declare const UserModel: Model<{
     Username?: string | null;
     password?: string | null;
 }, {}, {}, {
     id: string;
-}, import("mongoose").Document<unknown, {}, {
+}, mongoose.Document<unknown, {}, {
     Username?: string | null;
     password?: string | null;
 }, {
     id: string;
-}, import("mongoose").DefaultSchemaOptions> & Omit<{
+}, mongoose.DefaultSchemaOptions> & Omit<{
     Username?: string | null;
     password?: string | null;
 } & {
-    _id: import("mongoose").Types.ObjectId;
+    _id: mongoose.Types.ObjectId;
 } & {
     __v: number;
-}, "id"> & import("mongoose").HydratedDocumentOverrides<{
+}, "id"> & mongoose.HydratedDocumentOverrides<{
     id: string;
-}>, Schema<any, import("mongoose").Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
+}>, Schema<any, Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
     Username?: string | null;
     password?: string | null;
-}, import("mongoose").Document<unknown, {}, {
+}, mongoose.Document<unknown, {}, {
     Username?: string | null;
     password?: string | null;
 }, {
     id: string;
-}, import("mongoose").DefaultSchemaOptions> & Omit<{
+}, mongoose.DefaultSchemaOptions> & Omit<{
     Username?: string | null;
     password?: string | null;
 } & {
-    _id: import("mongoose").Types.ObjectId;
+    _id: mongoose.Types.ObjectId;
 } & {
     __v: number;
-}, "id"> & import("mongoose").HydratedDocumentOverrides<{
+}, "id"> & mongoose.HydratedDocumentOverrides<{
     id: string;
 }>, unknown, {
     Username?: string | null;
     password?: string | null;
 } & {
-    _id: import("mongoose").Types.ObjectId;
+    _id: mongoose.Types.ObjectId;
 } & {
     __v: number;
 }>, {
     Username?: string | null;
     password?: string | null;
 } & {
-    _id: import("mongoose").Types.ObjectId;
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}>;
+export declare const contentMOdel: Model<{
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+}, {}, {}, {
+    id: string;
+}, mongoose.Document<unknown, {}, {
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+}, {
+    id: string;
+}, mongoose.DefaultSchemaOptions> & Omit<{
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}, "id"> & mongoose.HydratedDocumentOverrides<{
+    id: string;
+}>, Schema<any, Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+}, mongoose.Document<unknown, {}, {
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+}, {
+    id: string;
+}, mongoose.DefaultSchemaOptions> & Omit<{
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}, "id"> & mongoose.HydratedDocumentOverrides<{
+    id: string;
+}>, unknown, {
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}>, {
+    title?: string | null;
+    type?: string | null;
+    link?: string | null;
+    tags: mongoose.Types.ObjectId[];
+    userId: mongoose.Types.ObjectId;
+} & {
+    _id: mongoose.Types.ObjectId;
 } & {
     __v: number;
 }>;

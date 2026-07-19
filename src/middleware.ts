@@ -6,7 +6,7 @@ import { jwt_password } from "./config";
         const header=req.headers["authorization"];
         const decoded= Jwt.verify(header as string,jwt_password)
      if(decoded){
-        (req as any).userID= (decoded as JwtPayload). id;
+        (req as any).userId= (decoded as JwtPayload). id;
         next()
      } else{
         res.status(403).json({
