@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.contentMOdel = exports.UserModel = void 0;
+exports.shareModel = exports.contentMOdel = exports.UserModel = void 0;
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("mongoose");
 const UserSchema = new mongoose_1.Schema({
@@ -16,4 +16,13 @@ const contentSchema = new mongoose_1.Schema({
     userId: { type: mongoose_1.Schema.Types.ObjectId, ref: 'User', required: true }
 });
 exports.contentMOdel = (0, mongoose_2.model)("content", contentSchema);
+const shareSchema = new mongoose_1.Schema({
+    hash: String,
+    UserId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "User",
+        unique: true
+    }
+});
+exports.shareModel = (0, mongoose_2.model)("link", shareSchema);
 //# sourceMappingURL=db.js.map

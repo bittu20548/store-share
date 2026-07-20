@@ -1,21 +1,22 @@
  
  import express from "express";
  import mongoose from "mongoose";
-
+import cors from "cors";
    mongoose.connect("mongodb://localhost:27017/brain");
  import { contentMOdel, UserModel } from "./db";
  import jwt from "jsonwebtoken";
  import { jwt_password } from "./config";
 import { usermiddleware } from "./middleware";
-import { share } from "node:stream/iter";
 
 //import { Jwt_password } from "jsonwebtoken";
      const app=express();
+     app.use(cors());
      app.use(express.json());
 
   app.post ("/api/v1/signup",async (req, res) =>{
    const Username=req.body.Username;
    const password=req.body.password;
+   console.log(Username,password)
   try{
 
     await UserModel.create({

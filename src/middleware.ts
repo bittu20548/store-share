@@ -4,7 +4,14 @@ import { jwt_password } from "./config";
  export const usermiddleware=(req:Request,res:Response,
     next:NextFunction)=>{
         const header=req.headers["authorization"];
-        const decoded= Jwt.verify(header as string,jwt_password)
+        if (!header){
+         return res.status(403).json({
+            message:"no token"
+         });
+        }
+        const token = header.split(" ")[1 ] as string;
+        console.log(token);
+        const decoded= Jwt.verify(token,jwt_password);
      if(decoded){
         (req as any).userId= (decoded as JwtPayload). id;
         next()

@@ -125,4 +125,55 @@ export declare const contentMOdel: Model<{
 } & {
     __v: number;
 }>;
+export declare const shareModel: Model<{
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+}, {}, {}, {
+    id: string;
+}, mongoose.Document<unknown, {}, {
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+}, {
+    id: string;
+}, mongoose.DefaultSchemaOptions> & Omit<{
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}, "id"> & mongoose.HydratedDocumentOverrides<{
+    id: string;
+}>, Schema<any, Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+}, mongoose.Document<unknown, {}, {
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+}, {
+    id: string;
+}, mongoose.DefaultSchemaOptions> & Omit<{
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}, "id"> & mongoose.HydratedDocumentOverrides<{
+    id: string;
+}>, unknown, {
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}>, {
+    hash?: string | null;
+    UserId?: mongoose.Types.ObjectId | null;
+} & {
+    _id: mongoose.Types.ObjectId;
+} & {
+    __v: number;
+}>;
 //# sourceMappingURL=db.d.ts.map

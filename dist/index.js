@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const cors_1 = __importDefault(require("cors"));
 mongoose_1.default.connect("mongodb://localhost:27017/brain");
 const db_1 = require("./db");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
@@ -12,10 +13,12 @@ const config_1 = require("./config");
 const middleware_1 = require("./middleware");
 //import { Jwt_password } from "jsonwebtoken";
 const app = (0, express_1.default)();
+app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.post("/api/v1/signup", async (req, res) => {
     const Username = req.body.Username;
     const password = req.body.password;
+    console.log(Username, password);
     try {
         await db_1.UserModel.create({
             Username: Username,
